@@ -4,6 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 // Rutas Globales
 const productRouter = require('./routes/products');
 

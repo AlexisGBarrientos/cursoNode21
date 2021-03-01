@@ -1,7 +1,11 @@
-
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const { dbConnection } = require('./Database/config');
+dbConnection();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
